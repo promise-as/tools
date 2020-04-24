@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>评分</title>
+  <script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+  <script src="https://img.thea.cn/public/js/thea.ms.form.js"></script>
+
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+  <!-- 星星评分 -->
+  <div class="evaluate">
+    <div class="star">
+      <i class="s-item on"></i>
+      <i class="s-item on"></i>
+      <i class="s-item on"></i>
+      <i class="s-item on"></i>
+      <i class="s-item"></i>
+    </div>
+
+    <div class="hint">轻点星评分</div>
+  </div>
+
+  <!-- 审核 -->
+  <div class="check defaults_dataid" data-id="2-0-0-2-2-2-1-深圳驾考培训">
+    <form class="sign-in">
+      <div class="c-header">2020年一级建造师报考条件在线审核</div>
+
+      <div class="c-item">
+        <div class="i-title">学历</div>
+        <ul>
+          <li class="on">大专以下</li>
+          <li>大专</li>
+          <li>本科及以上</li>
+        </ul>
+      </div>
+
+      <div class="c-item">
+        <div class="i-title">工作年限</div>
+        <ul>
+          <li class="on">1-3年</li>
+          <li>4-6年</li>
+          <li>7年以上</li>
+        </ul>
+      </div>
+
+      <div class="c-item">
+        <div class="i-title">您的专业</div>
+        <ul>
+          <li class="on">工程及工程经济类</li>
+          <li>计算机类</li>
+          <li>英语类</li>
+          <li>其他</li>
+        </ul>
+      </div>
+
+      <!-- 收集结果 -->
+      <input type="hidden" class="user-name" value="测试">
+      <input type="text" class="tel user-tel" placeholder="请输入您的联系方式" maxlength="11">
+      <input type="hidden" class="user-con" id="cesult">
+      <input type="submit" class="submit" value="获取审核结果" id="check">
+
+    </form>
+  </div>
+
+
+  <script src="js/toolFn.js"></script>
+  <script>
+    // 星星评分
+    // params: 点击元素，类名      
+    // toolFn.evaluate('.star .s-item', 'on');
+
+
+    theaMsForm($('.sign-in'));
+
+    // 点击切换
+    // params: 点击元素，父类元素，类名 
+    toolFn.clickEvent('.c-item li', 'ul', 'on');
+
+    // 收集结果
+    // params: 每一项，类名，收集的容器，连接符号
+    $('#check').click(function () {
+      toolFn.collectResult('.c-item', 'on', '#cesult', '、');
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+body, ul { margin: 0; }
+
+ul { padding: 0; }
+
+input { outline: none; border: none; font-size: 14px; padding: 0 1rem; }
+
+input[type="submit"] { cursor: pointer; }
+
+.evaluate { display: none; width: 854px; background-color: #bbbbbb; margin: 50px auto; text-align: center; padding: 20px 0; }
+.evaluate .s-item { display: inline-block; width: 30px; height: 30px; cursor: pointer; margin: 0 6px; background: url(../images/star-n.png) no-repeat; }
+.evaluate .s-item.on { background: url(../images/star-s.png) no-repeat; }
+.evaluate .hint { font-size: 14px; line-height: 40px; color: #333333; }
+
+.check { width: 1000px; padding: 20px; margin: 0 auto; color: #fff; background: #3366cc; }
+.check .c-header { font-size: 24px; line-height: 30px; margin-bottom: 20px; }
+.check .c-item { font-size: 16px; }
+.check ul { padding: 10px 0; }
+.check li { display: inline-block; padding: 0 14px; height: 30px; line-height: 28px; border-radius: 15px; border: 1px solid #ffffff; box-sizing: border-box; margin-right: 8px; cursor: pointer; }
+.check li.on { background: #fff; color: #2a4fde; }
+.check input { height: 42px; line-height: 40px; border-radius: 15px; }
+.check .tel { background: #ffffff; margin-top: 20px; }
+.check .submit { background: #df4839; color: #FFFFFF; cursor: pointer; }
+
+/*# sourceMappingURL=index.css.map */
