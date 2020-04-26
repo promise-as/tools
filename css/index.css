@@ -1,17 +1,29 @@
-body, ul { margin: 0; }
+body, ul, p { margin: 0; }
 
-ul { padding: 0; }
+ul { padding: 0; list-style-type: none; }
+
+a { text-decoration: none; color: #333; }
+
+i, span { display: inline-block; vertical-align: middle; }
+
+em { font-style: normal; }
 
 input { outline: none; border: none; font-size: 14px; padding: 0 1rem; }
 
 input[type="submit"] { cursor: pointer; }
+
+.m-tab ul, .m-tab .t-cont .i-detail .d-row, .m-tab .t-cont .i-detail .d-price { zoom: 1; }
+.m-tab ul:after, .m-tab .t-cont .i-detail .d-row:after, .m-tab .t-cont .i-detail .d-price:after { clear: both; }
+.m-tab ul:before, .m-tab .t-cont .i-detail .d-row:before, .m-tab .t-cont .i-detail .d-price:before, .m-tab ul:after, .m-tab .t-cont .i-detail .d-row:after, .m-tab .t-cont .i-detail .d-price:after { content: ""; display: table; }
+
+body { background: #f8f8f8; }
 
 .evaluate { display: none; width: 854px; background-color: #bbbbbb; margin: 50px auto; text-align: center; padding: 20px 0; }
 .evaluate .s-item { display: inline-block; width: 30px; height: 30px; cursor: pointer; margin: 0 6px; background: url(../images/star-n.png) no-repeat; }
 .evaluate .s-item.on { background: url(../images/star-s.png) no-repeat; }
 .evaluate .hint { font-size: 14px; line-height: 40px; color: #333333; }
 
-.check { width: 1000px; padding: 20px; margin: 0 auto; color: #fff; background: #3366cc; }
+.check { display: none; width: 1000px; padding: 20px; margin: 0 auto; color: #fff; background: #3366cc; }
 .check .c-header { font-size: 24px; line-height: 30px; margin-bottom: 20px; }
 .check .c-item { font-size: 16px; }
 .check ul { padding: 10px 0; }
@@ -19,6 +31,112 @@ input[type="submit"] { cursor: pointer; }
 .check li.on { background: #fff; color: #2a4fde; }
 .check input { height: 42px; line-height: 40px; border-radius: 15px; }
 .check .tel { background: #ffffff; margin-top: 20px; }
-.check .submit { background: #df4839; color: #FFFFFF; cursor: pointer; }
+.check .submit { background: #df4839; color: #ffffff; cursor: pointer; }
+
+.m-tab { display: none; width: 1200px; margin: 0 auto; padding: 20px 0; }
+.m-tab ul li { float: left; margin-right: 20px; box-sizing: border-box; }
+.m-tab .t-head { margin-bottom: 20px; }
+.m-tab .t-head li { padding: 0 20px; line-height: 40px; color: #333333; border: solid 1px #bbbbbb; cursor: pointer; }
+.m-tab .t-head li.on { background-color: #f15656; border: 1px solid #f15656; color: #ffffff; }
+.m-tab .t-cont .c-item { display: none; }
+.m-tab .t-cont .c-item.on { display: block; }
+.m-tab .t-cont .i-title { display: block; font-size: 16px; line-height: 30px; color: #000000; margin-bottom: 16px; }
+.m-tab .t-cont .i-detail { line-height: 24px; color: #888888; border-bottom: 1px solid #dddddd; padding-bottom: 12px; }
+.m-tab .t-cont .i-detail .d-row .r-key { float: left; }
+.m-tab .t-cont .i-detail .d-row .r-val { float: left; width: 76%; }
+.m-tab .t-cont .i-detail .d-price { padding-top: 15px; }
+.m-tab .t-cont .i-detail .d-price .original { float: left; line-height: 30px; }
+.m-tab .t-cont .i-detail .d-price .original span { text-decoration: line-through; }
+.m-tab .t-cont .i-detail .d-price .current { float: right; }
+.m-tab .t-cont .i-detail .d-price .current span, .m-tab .t-cont .i-detail .d-price .current strong { color: #f15656; }
+.m-tab .t-cont .i-detail .d-price .current strong { font-size: 24px; }
+.m-tab .t-cont .i-btn { display: block; width: 118px; height: 32px; border-radius: 17px; border: solid 1px #649cf0; text-align: center; line-height: 32px; color: #649cf0; margin: 20px auto 0; }
+.m-tab .t-cont li { width: 260px; padding: 20px; font-size: 14px; background-color: #ffffff; }
+.m-tab .t-cont li:hover { box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); }
+.m-tab .t-cont li:hover .i-title { color: #f15656; }
+.m-tab .t-cont li:hover .i-btn { background: #649cf0; color: #fff; }
+
+.text-roll { display: none; width: 450px; margin: 20px auto; overflow: hidden; position: relative; border: 1px solid #ccc; }
+.text-roll .hd { overflow: hidden; height: 30px; background: #f4f4f4; padding: 0 10px; }
+.text-roll .hd .prev, .text-roll .hd .next { float: right; width: 9px; height: 5px; margin-top: 10px; cursor: pointer; background: url(../images/arrow.png); }
+.text-roll .hd .prev { background-position: 0 -100px; margin-right: 10px; }
+.text-roll .hd .next { background-position: 0 -140px; }
+.text-roll .bd { height: 100px; overflow: hidden; margin: 10px; }
+.text-roll .bd li { font-size: 12px; line-height: 24px; }
+.text-roll .bd .date { float: right; color: #999; }
+.text-roll .bd a { color: #333; }
+.text-roll .bd a:hover { color: #1974a1; }
+
+.countdown-wrap { display: none; width: 600px; margin: 10px auto; padding: 20px 0; border: 1px solid #ccc; }
+.countdown-wrap .r-title { font-size: 18px; font-weight: bold; text-align: center; margin-bottom: 20px; }
+.countdown-wrap .r-day { text-align: center; padding-left: 20px; }
+.countdown-wrap .r-day .d-num { display: inline-block; width: 44px; height: 51px; line-height: 51px; background-color: #006699; border-radius: 4px; font-size: 29px; color: #fff; }
+.countdown-wrap .r-day em { margin-left: 6px; }
+
+.menu-list { width: 770px; margin: 0 auto; }
+.menu-list .row-play { width: 14px; height: 12px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -431px -77px; }
+.menu-list .row-pause { width: 16px; height: 16px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -122px -374px; vertical-align: middle; }
+.menu-list .list-item { border-bottom: 1px solid #ededed; }
+.menu-list .list-item .outer-icon { width: 22px; height: 22px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -388px -95px; margin-right: 14px; }
+.menu-list .list-item .inner-icon { width: 18px; height: 18px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -222px -330px; margin-right: 10px; }
+.menu-list .list-item .degree { font-size: 12px; color: #999999; }
+.menu-list .list-item .h-name { margin-right: 20px; font-size: 16px; }
+.menu-list .list-item .icon-fix { width: 19px; height: 22px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -388px -304px; margin: 4px 5px; vertical-align: middle; }
+.menu-list .list-item .i-detail { padding-left: 40px; display: none; }
+.menu-list .list-item .i-detail ul { padding: 0 0 10px 3px; line-height: 48px; display: none; }
+.menu-list .list-item .i-detail li { height: 30px; line-height: 30px; position: relative; }
+.menu-list .list-item .i-detail li::before { content: ""; width: 1px; height: 16px; background: url(https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/line_2.png) no-repeat; position: absolute; left: 5px; top: 26px; }
+.menu-list .list-item .i-detail li:last-child::before { display: none; }
+.menu-list .list-item .icon-c { float: left; width: 12px; height: 13px; background: url(https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/lx_1.png) no-repeat; margin-right: 10px; margin-top: 10px; }
+.menu-list .list-item .d-r { float: left; width: 96%; }
+.menu-list .list-item .d-r .text { width: 78%; vertical-align: middle; }
+.menu-list .list-item .i-head { line-height: 60px; cursor: pointer; }
+.menu-list .list-item .i-head .h-name { font-weight: bold; }
+.menu-list .list-item .i-head .icon-down { width: 22px; height: 22px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -388px -179px; margin-right: 14px; }
+.menu-list .list-item .d-head { height: 54px; line-height: 54px; cursor: pointer; }
+.menu-list .list-item .d-head .icon-up { width: 18px; height: 18px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -260px -330px; margin-right: 17px; }
+.menu-list .list-item .d-head .icon-down { width: 18px; height: 18px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -222px -330px; margin-right: 17px; }
+.menu-list .list-item:last-child { border-bottom: none; }
+.menu-list .list-item:last-child .i-head { border-bottom: none; }
+.menu-list .list-item.unfold .i-head { border-bottom: 1px dotted #c1c1c1; }
+.menu-list .list-item.unfold .outer-icon { background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -388px -179px; }
+.menu-list .list-item.unfold .i-detail { display: block; }
+.menu-list .list-item.unfold .i-detail.on .inner-icon { background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -260px -330px; }
+.menu-list .list-item.unfold .i-detail.on ul { display: block; }
+.menu-list .l-first { border-bottom: 1px solid #ededed; }
+.menu-list .l-first .f-head, .menu-list .l-first .s-head, .menu-list .l-first .t-head { cursor: pointer; }
+.menu-list .l-first .f-head { line-height: 60px; padding-left: 15px; }
+.menu-list .l-first .s-head { line-height: 50px; border-bottom: 1px dotted #c1c1c1; }
+.menu-list .l-first .t-head { line-height: 40px; border-bottom: 1px dotted #c1c1c1; }
+.menu-list .l-first .f-icon { width: 22px; height: 22px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -388px -95px; margin-right: 14px; }
+.menu-list .l-first .f-text { font-size: 18px; font-weight: bold; }
+.menu-list .l-first .f-second { display: none; padding-left: 35px; }
+.menu-list .l-first .s-icon { width: 18px; height: 18px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -222px -330px; margin-right: 10px; }
+.menu-list .l-first .s-three { padding-left: 20px; display: none; }
+.menu-list .l-first .t-icon { width: 15px; height: 15px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -264px -374px; margin-right: 10px; }
+.menu-list .l-first .t-detail { padding-left: 20px; display: none; }
+.menu-list .l-first .t-detail ul { padding: 0 0 10px 3px; line-height: 48px; }
+.menu-list .l-first .t-detail li { height: 30px; line-height: 30px; border-bottom: none; position: relative; }
+.menu-list .l-first .t-detail li::before { content: ""; width: 1px; height: 16px; background: url(https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/line_2.png) no-repeat; position: absolute; left: 5px; top: 26px; }
+.menu-list .l-first .t-detail li:last-child::before { display: none; }
+.menu-list .l-first .icon-c { float: left; width: 12px; height: 13px; background: url(https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/lx_1.png) no-repeat; margin-right: 10px; margin-top: 10px; }
+.menu-list .l-first .d-r { float: left; width: 96%; }
+.menu-list .l-first .d-r .text { display: inline-block; width: 75%; vertical-align: middle; }
+.menu-list .l-first .d-r .row-val { margin-right: 10px; }
+.menu-list .l-first .i-head { line-height: 60px; cursor: pointer; }
+.menu-list .l-first .i-head .h-name { font-weight: bold; }
+.menu-list .l-first .i-head .icon-down { width: 22px; height: 22px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -388px -179px; margin-right: 14px; }
+.menu-list .l-first .d-head { height: 54px; line-height: 54px; cursor: pointer; }
+.menu-list .l-first .d-head .icon-up { width: 18px; height: 18px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -260px -330px; margin-right: 17px; }
+.menu-list .l-first .d-head .icon-down { width: 18px; height: 18px; background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -222px -330px; margin-right: 17px; }
+.menu-list .l-first:last-child { border-bottom: none; }
+.menu-list .l-first:last-child .i-head { border-bottom: none; }
+.menu-list .l-first.f-unfold .f-head { border-bottom: 1px dotted #c1c1c1; }
+.menu-list .l-first.f-unfold .f-icon { background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -388px -179px; }
+.menu-list .l-first.f-unfold .f-second { display: block; }
+.menu-list .l-first .s-unfold .s-icon { background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -260px -330px; }
+.menu-list .l-first .s-unfold .s-three { display: block; }
+.menu-list .l-first .t-unfold .t-icon { background: url("https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/sprites.png") -334px -374px; }
+.menu-list .l-first .t-unfold .t-detail { display: block; }
 
 /*# sourceMappingURL=index.css.map */

@@ -68,6 +68,338 @@
     </form>
   </div>
 
+  <!-- mouseenter tab -->
+  <div class="m-tab">
+    <div class="t-head">
+      <ul>
+        <li class="on">一级建造师</li>
+        <li>二级建造师</li>
+        <li>消防工程师</li>
+        <li>安全工程师</li>
+      </ul>
+    </div>
+    <div class="t-cont">
+      <div class="c-item on">
+        <ul>
+          <li>
+            <a href="" class="i-title">一级建造师题库</a>
+            <div class="i-detail">
+              <div class="d-row">
+                <span class="r-key" style="height: 48px;">内容：</span>
+                <span class="r-val">吃透近3年考试真题、掌握考题套路精髓</span>
+              </div>
+
+              <div class="d-row">
+                <span class="d-key" style="height: 24px;">课时：</span>
+                <span class="d-val">6小时</span>
+              </div>
+
+              <div class="d-price">
+                <div class="original">
+                  原价：<span>￥1360</span>
+                </div>
+                <div class="current">
+                  现价：<span>￥</span><strong>1266</strong>
+                </div>
+              </div>
+            </div>
+            <a href="" class="i-btn">进入选课</a>
+          </li>
+        </ul>
+      </div>
+      <div class="c-item">
+        <ul>
+          <li>
+            <a href="" class="i-title">二级建造师题库</a>
+            <div class="i-detail">
+              <div class="d-row">
+                <span class="r-key" style="height: 48px;">内容：</span>
+                <span class="r-val">吃透近3年考试真题、掌握考题套路精髓</span>
+              </div>
+
+              <div class="d-row">
+                <span class="d-key" style="height: 24px;">课时：</span>
+                <span class="d-val">6小时</span>
+              </div>
+
+              <div class="d-price">
+                <div class="original">
+                  原价：<span>￥1360</span>
+                </div>
+                <div class="current">
+                  现价：<span>￥</span><strong>1266</strong>
+                </div>
+              </div>
+            </div>
+            <a href="" class="i-btn">进入选课</a>
+          </li>
+        </ul>
+      </div>
+      <div class="c-item">
+        <ul>
+          <li>
+            <a href="" class="i-title">消防工程师题库</a>
+            <div class="i-detail">
+              <div class="d-row">
+                <span class="r-key" style="height: 48px;">内容：</span>
+                <span class="r-val">吃透近3年考试真题、掌握考题套路精髓</span>
+              </div>
+
+              <div class="d-row">
+                <span class="d-key" style="height: 24px;">课时：</span>
+                <span class="d-val">6小时</span>
+              </div>
+
+              <div class="d-price">
+                <div class="original">
+                  原价：<span>￥1360</span>
+                </div>
+                <div class="current">
+                  现价：<span>￥</span><strong>1266</strong>
+                </div>
+              </div>
+            </div>
+            <a href="" class="i-btn">进入选课</a>
+          </li>
+        </ul>
+      </div>
+      <div class="c-item">
+        <ul>
+          <li>
+            <a href="" class="i-title">安全工程师题库</a>
+            <div class="i-detail">
+              <div class="d-row">
+                <span class="r-key" style="height: 48px;">内容：</span>
+                <span class="r-val">吃透近3年考试真题、掌握考题套路精髓</span>
+              </div>
+
+              <div class="d-row">
+                <span class="d-key" style="height: 24px;">课时：</span>
+                <span class="d-val">6小时</span>
+              </div>
+
+              <div class="d-price">
+                <div class="original">
+                  原价：<span>￥1360</span>
+                </div>
+                <div class="current">
+                  现价：<span>￥</span><strong>1266</strong>
+                </div>
+              </div>
+            </div>
+            <a href="" class="i-btn">进入选课</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 文字滚动 -->
+  <div class="text-roll">
+    <div class="hd">
+      <a class="next"></a>
+      <a class="prev"></a>
+    </div>
+    <div class="bd">
+      <ul>
+        <li><span class="date">2020-06-18</span><a href="#">中国打破了世界软件巨头规则</a></li>
+        <li><span class="date">2020-06-18</span><a href="#">口语：会说中文就能说英语！</a></li>
+        <li><span class="date">2020-06-18</span><a href="#">农场摘菜不如在线学外语好玩</a></li>
+        <li><span class="date">2020-06-18</span><a href="#">数理化老师竟也看学习资料？</a></li>
+        <li><span class="date">2020-06-18</span><a href="#">学英语送ipad2,45天突破听说</a></li>
+        <li><span class="date">2020-06-18</span><a href="#">学外语，上北外！</a></li>
+        <li><span class="date">2020-06-18</span><a href="#">那些无法理解的荒唐事</a></li>
+      </ul>
+    </div>
+    <script src="https://img.thea.cn/public/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script>
+      $(".text-roll")
+        .slide(
+          {
+            mainCell: ".bd ul",
+            autoPlay: true,
+            effect: "topMarquee",
+            vis: 5,
+            interTime: 50,
+            trigger: "click"
+          }
+        );
+    </script>
+  </div>
+
+  <!-- 倒计时 -->
+  <div class="countdown-wrap">
+    <div class="r-title">距2020年一级建造师考试还有</div>
+    <div class="r-day" id='countdown'>
+      <span class="d-num" id="h">1</span>
+      <span class="d-num" id="t">1</span>
+      <span class="d-num" id="o">2</span>
+      <em>天</em>
+    </div>
+  </div>
+
+  <!-- 展开与收起 -->
+  <div class="menu-list">
+
+    <div class="l-first">
+
+      <div class="f-head">
+        <i class="f-icon"></i>
+        <span class="f-text">技术实务精讲班</span>
+      </div>
+
+      <div class="f-second">
+
+        <div class="s-head">
+          <i class="s-icon"></i>
+          <span class="s-text">技术实务</span>
+        </div>
+
+        <div class="s-three">
+
+          <div class="t-head">
+            <i class="t-icon"></i>
+            <span class="s-text">预习阶段</span>
+          </div>
+
+          <div class="t-detail">
+            <ul>
+              <li>
+                <i class="icon-c"></i>
+                <div class="d-r">
+                  <a href="" class="text">备考指导</a>
+                  <span class="row-val">高清-20分钟00秒</span><i class="row-play"></i>
+                </div>
+              </li>
+              <li>
+                <i class="icon-c"></i>
+                <div class="d-r">
+                  <a href="" class="text">2019精讲视频</a>
+                  <span class="row-val">高清-20分钟00秒</span><i class="row-pause"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="l-first">
+
+      <div class="f-head">
+        <i class="f-icon"></i>
+        <span class="f-text">技术实务精讲班2</span>
+      </div>
+
+      <div class="f-second">
+
+        <div class="s-head">
+          <i class="s-icon"></i>
+          <span class="s-text">技术实务</span>
+        </div>
+
+        <div class="s-three">
+
+          <div class="t-head">
+            <i class="t-icon"></i>
+            <span class="s-text">预习阶段</span>
+          </div>
+
+          <div class="t-detail">
+            <ul>
+              <li>
+                <i class="icon-c"></i>
+                <div class="d-r">
+                  <a href="" class="text">备考指导</a>
+                  <span class="row-val">高清-20分钟00秒</span><i class="row-play"></i>
+                </div>
+              </li>
+              <li>
+                <i class="icon-c"></i>
+                <div class="d-r">
+                  <a href="" class="text">2019精讲视频</a>
+                  <span class="row-val">高清-20分钟00秒</span><i class="row-pause"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="l-first">
+
+      <div class="f-head">
+        <i class="f-icon"></i>
+        <span class="f-text">技术实务精讲班3</span>
+      </div>
+
+      <div class="f-second">
+
+        <div class="s-head">
+          <i class="s-icon"></i>
+          <span class="s-text">技术实务</span>
+        </div>
+
+        <div class="s-three">
+
+          <div class="t-head">
+            <i class="t-icon"></i>
+            <span class="s-text">预习阶段</span>
+          </div>
+
+          <div class="t-detail">
+            <ul>
+              <li>
+                <i class="icon-c"></i>
+                <div class="d-r">
+                  <a href="" class="text">备考指导</a>
+                  <span class="row-val">高清-20分钟00秒</span><i class="row-play"></i>
+                </div>
+              </li>
+              <li>
+                <i class="icon-c"></i>
+                <div class="d-r">
+                  <a href="" class="text">2019精讲视频</a>
+                  <span class="row-val">高清-20分钟00秒</span><i class="row-pause"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      // 三层 展开与收起
+      // outerBox: 最外层盒子，headBox: 头部盒子
+      function threePlyer(outerBox, headBox, className) {
+
+        $(outerBox).each(function (i) {
+
+          var that = this;
+
+          $(that).find(headBox).click(function () {
+
+            $($(outerBox)[i]).toggleClass(className);
+
+          })
+        })
+      }
+      // 第一层
+      threePlyer('.l-first', '.f-head', 'f-unfold');
+      // 第二层
+      threePlyer('.f-second', '.s-head', 's-unfold');
+      // 第三层
+      threePlyer('.s-three', '.t-head', 't-unfold');
+    </script>
+  </div>
 
   <script src="js/toolFn.js"></script>
   <script>
@@ -87,6 +419,25 @@
     $('#check').click(function () {
       toolFn.collectResult('.c-item', 'on', '#cesult', '、');
     });
+
+    // mouseenter tab
+    // params: 触发元素，内容元素，类名
+    toolFn.mouseEnter('.t-head li', '.t-cont .c-item', 'on');
+
+    // 倒计时
+    // 总天数
+    var day = Number($('#countdown').find('.d-num').text()),
+      hundred = $('#h'), // 百位数
+      ten = $('#t'), // 十位数
+      one = $('#o'); // 个位数
+    // 倒计时的时间间隔(毫秒)
+    var aDay = 24 * 60 * 60 * 1000;
+    // 倒计时id
+    var timeId = setInterval(function () {
+      toolFn.countdown(day, hundred, ten, one);
+      day--
+    }, aDay);
+
   </script>
 </body>
 
