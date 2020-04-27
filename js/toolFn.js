@@ -78,7 +78,7 @@ var toolFn = {
     })
 
     $(collectBox).val(result);
-    
+
   },
 
   // 倒计时（单位：天）
@@ -93,13 +93,13 @@ var toolFn = {
     one.text(o);
     ten.text(t);
     hundred.text(h);
-   
+
     // 剩余时间不到3位数
     if (day < 100) {
       hundred.hide();
     }
-     // 剩余时间不到2位数
-     if (day < 10) {
+    // 剩余时间不到2位数
+    if (day < 10) {
       ten.hide();
     }
     // 剩余时间为0
@@ -107,8 +107,40 @@ var toolFn = {
       clearInterval(timeId);
       return null;
     }
+  },
+
+  // 多层折叠（外层一定有唯一一个展开）
+  // 最外层只能展开一个
+  unique: function (firstBox, btnBox, className) {
+
+    $(firstBox).each(function () {
+
+      var that = this;
+
+      $(that).find(btnBox).click(function () {
+
+        $(that).addClass(className).siblings().removeClass(className);
+
+      });
+    });
+  },
+  // outerBox: 最外层盒子，headBox: 头部盒子
+  multiLayer: function (outerBox, headBox, className) {
+
+    $(outerBox).each(function (i) {
+
+      var that = this;
+
+      $(that).find(headBox).click(function () {
+
+        $($(outerBox)[i]).toggleClass(className);
+
+        event.preventDefault();
+
+      })
+    })
+
   }
 
-  // 展开与收起
   
 }

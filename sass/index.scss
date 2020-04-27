@@ -312,11 +312,11 @@ body {
   }
 }
 
-// 展开与收起
-.menu-list {
+// 多层折叠（外层一定有唯一一个展开）
+.multi-layer {
   width: 770px;
   margin: 0 auto;
-
+  display: none;
   .row-play {
     width: 14px;
     height: 12px;
@@ -634,3 +634,4 @@ body {
   }
 
 }
+

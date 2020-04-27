@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>评分</title>
+  <title>工具大全</title>
   <script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
   <script src="https://img.thea.cn/public/js/thea.ms.form.js"></script>
 
@@ -239,7 +239,7 @@
   </div>
 
   <!-- 展开与收起 -->
-  <div class="menu-list">
+  <div class="multi-layer">
 
     <div class="l-first">
 
@@ -375,30 +375,6 @@
       </div>
 
     </div>
-
-    <script>
-      // 三层 展开与收起
-      // outerBox: 最外层盒子，headBox: 头部盒子
-      function threePlyer(outerBox, headBox, className) {
-
-        $(outerBox).each(function (i) {
-
-          var that = this;
-
-          $(that).find(headBox).click(function () {
-
-            $($(outerBox)[i]).toggleClass(className);
-
-          })
-        })
-      }
-      // 第一层
-      threePlyer('.l-first', '.f-head', 'f-unfold');
-      // 第二层
-      threePlyer('.f-second', '.s-head', 's-unfold');
-      // 第三层
-      threePlyer('.s-three', '.t-head', 't-unfold');
-    </script>
   </div>
 
   <script src="js/toolFn.js"></script>
@@ -437,6 +413,16 @@
       toolFn.countdown(day, hundred, ten, one);
       day--
     }, aDay);
+
+    // 多层折叠（外层一定有唯一一个展开）
+    // 第一层
+    toolFn.unique('.l-first', '.f-head', 'f-unfold');
+    // 如果外层不是唯一展开就调用这个
+    // threePlyer('.l-first', '.f-head', 'f-unfold');
+    // 第二层
+    toolFn.multiLayer('.f-second', '.s-head', 's-unfold');
+    // 第三层
+    toolFn.multiLayer('.s-three', '.t-head', 't-unfold');
 
   </script>
 </body>
